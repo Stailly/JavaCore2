@@ -2,29 +2,20 @@ package lesson1;
 
 import java.util.Random;
 
-public class Cat implements CanJump, CanRun {
+public class Robot implements CanJump, CanRun {
     private String name;
     private int jumpHeight;
     private int runLenght;
     private static final Random RANDOM = new Random();
 
-    public Cat (String name) {
+    public Robot(String name) {
         this.name = name;
-        this.jumpHeight = RANDOM.nextInt(10) + 14;
-        this.runLenght = RANDOM.nextInt(11) + 22;
+        this.jumpHeight = RANDOM.nextInt(38) + 3;
+        this.runLenght = RANDOM.nextInt(5) + 11;
     }
 
     public String getName() {
         return name;
-    }
-
-    @Override
-    public String toString() {
-        return "Cat{" +
-                "name='" + name + '\'' +
-                ", jumpHeight=" + jumpHeight +
-                ", runLenght=" + runLenght +
-                '}';
     }
 
     @Override
@@ -37,5 +28,14 @@ public class Cat implements CanJump, CanRun {
     public boolean run(Treadmill treadmill) {
         System.out.print(name + " пробежал(а) расстояние " + treadmill.distance + ": ");
         return runLenght>= treadmill.distance;
+    }
+
+    @Override
+    public String toString() {
+        return "Robot{" +
+                "name='" + name + '\'' +
+                ", jumpHeight=" + jumpHeight +
+                ", runLenght=" + runLenght +
+                '}';
     }
 }
