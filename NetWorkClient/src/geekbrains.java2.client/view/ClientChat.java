@@ -14,7 +14,7 @@ public class ClientChat extends JFrame {
     JTextArea textArea = new JTextArea();
     JScrollPane scroll = new JScrollPane(textArea);
     JTextField textField = new JTextField();
-    String[] data1 = {"nick1", "nick2", "nick3"};
+    String[] data1 = {"All", "nick1", "nick2", "nick3"};
     JList<String> usersList = new JList<>(data1);
     JButton sendButton = new JButton("Send!");
     private  ClientController controller;
